@@ -1,0 +1,26 @@
+Types,Count,% Over total
+application/ocsp-response,5970,27.06%
+None,5649,25.60%
+text/html,3459,15.68%
+application/x-apple-plist,1922,8.71%
+application/pkix-crl,360,1.63%
+application/json,163,0.74%
+application/pkix-cert,160,0.73%
+application/pkcs7-mime,152,0.69%
+application/x-apple-diskimage,108,0.49%
+text/plain,85,0.39%
+application/octet-stream,77,0.35%
+application/javascript,7,0.03%
+text/html; charset=UTF-8,5,0.02%
+image/png,4,0.02%
+image/jpeg,4,0.02%
+application/x-sh,2,0.01%
+text/xml,2,0.01%
+application/vnd.openxmlformats-officedocument.wordprocessingml.document,2,0.01%
+text/html; charset=ISO-8859-1,1,0.00%
+application/x-download,1,0.00%
+application/xml,1,0.00%
+text/javascript,1,0.00%
+image/x-icon,1,0.00%
+text/html; charset=iso-8859-1,1,0.00%
+application/zip,1,0.00%
