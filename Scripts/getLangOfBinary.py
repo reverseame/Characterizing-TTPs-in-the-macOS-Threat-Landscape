@@ -50,17 +50,17 @@ def getInfo(r):
         return []
 
 
-def countSymbols(hash, symbols, symbols_csv_path):
+def getLang(hash, info, csv_path):
     """see info"""
     try:
-        lang = symbols['bin']['lang']
+        lang = info['bin']['lang']
         if lang:
-            with open(symbols_csv_path, mode='a') as file:
+            with open(csv_path, mode='a') as file:
                 file.write(f"{hash},{lang}\n")
     except Exception as e:
-        with open(symbols_csv_path, mode='a') as file:
+        with open(csv_path, mode='a') as file:
             file.write(f"{hash},error\n")
-        print(f"Error counting symbols: {e}")
+        print(f"Error getting Lang: {e}")
         return "nan"
 
   
@@ -107,7 +107,7 @@ if __name__ == "__main__":
                 r = r2pipe.open(str(entry))
                 
                 info = getInfo(r)
-                total_symbols_count = countSymbols(entry.stem, info, csv_path)
+                getLang(entry.stem, info, csv_path)
 
             else:
                 print("isNOTmacho")

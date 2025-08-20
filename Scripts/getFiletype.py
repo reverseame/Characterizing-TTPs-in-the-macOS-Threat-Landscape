@@ -29,22 +29,6 @@ columnNameCount = "Count"
 
 csv_path = '../Output/csv/filetype.csv'
 
-def radareSymbols():
-    symbols_df = pd.read_csv('../Output/csv/symbols_new.csv', header=None, on_bad_lines='skip', low_memory=False)
-
-    symbols_df.columns = ['Symbol', 'Count']
-
-    symbols_df['Count'] = pd.to_numeric(symbols_df['Count'], errors='coerce')
-
-    symbols_df = symbols_df.dropna(subset=['Count'])
-
-    grouped_symbols_df = symbols_df.groupby('Symbol', as_index=False)['Count'].sum()
-
-    grouped_symbols_df = grouped_symbols_df.sort_values(by='Count', ascending=False)
-    grouped_symbols_df.to_csv('../Output/csv/symbols_modified.csv', index=False)
-
-
-
 def is_macho_binary(file_path):
     """Check if the file is a Mach-O binary"""
     result = subprocess.run(['file', '--mime-type', '-b', file_path], capture_output=True, text=True)
@@ -65,17 +49,17 @@ def getInfo(r):
         return []
 
 
-def countSymbols(hash, symbols, symbols_csv_path):
+def getFiletype(hash, info, csv_path):
     """see info"""
     try:
-        lang = symbols['core']['type']
-        if lang:
-            with open(symbols_csv_path, mode='a') as file:
-                file.write(f"{hash},{lang}\n")
+        file_type = info['core']['type']
+        if file_type:
+            with open(csv_path, mode='a') as file:
+                file.write(f"{hash},{file_type}\n")
     except Exception as e:
-        with open(symbols_csv_path, mode='a') as file:
+        with open(csv_path, mode='a') as file:
             file.write(f"{hash},error\n")
-        print(f"Error counting symbols: {e}")
+        print(f"Error getting filetype: {e}")
         return "nan"
 
   
@@ -122,7 +106,7 @@ if __name__ == "__main__":
                 r = r2pipe.open(str(entry))
                 
                 info = getInfo(r)
-                total_symbols_count = countSymbols(entry.stem, info, csv_path)
+                getFiletype(entry.stem, info, csv_path)
 
             else:
                 print("isNOTmacho")
@@ -139,4 +123,3 @@ if __name__ == "__main__":
         elapsed_time = end_time - start_radare_time  # Calculate elapsed time in seconds
         print(f"Elapsed time going...: ", i, " ", {elapsed_time})
 
-    radareSymbols()
