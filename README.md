@@ -36,6 +36,7 @@ file_written_counts -- All the files written by the binaries during execution
 Langs.csv -- Programming language based on the analysis of radare  
 lib_counts.csv -- Libraries included from all binaries  
 unique_hashes_with_info.csv -- Binaries that have behavior in the V.T. sandboxes  
+hash_and_malicious_ratio.csv -- Hash and his ratio of malicious detected by A.V. by V.T., the total is the sum of A.V. that has classified the different files by harmless, suspicious, undetected and malicious.
 
 ## Network info
 
