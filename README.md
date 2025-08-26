@@ -2,7 +2,7 @@
 Source data and Scripts used for the paper: Characterizing Tactics, Techniques, and Procedures in the macOS Threat Landscape
 
 # Installation and Usage
-The scripts rund with Python 3.11+. To use the scripts you only have to change the path where source data is and output data and run it.
+The scripts runs with Python 3.11+. To use the scripts you only have to change the path where source data is and output data and run it.
 # Scripts
 Die.py — Get entropy of each hash with D.I.E.  
 checkdga.py — Check domains comparing domains to DGARCHIVE  
