@@ -50,9 +50,9 @@ Domains_Summary.log -- Summary information of all domains consulted to NeutrinoA
 Ips_Summary.log -- Summary information of all IPs consulted to NeutrinoAPI  
 
 # Authors
-Daniel Lastanao Miró, Project Leader
-Javier Carrillo-Mondéjar, Project Member
-Ricardo J. Rodríguez, Project Member
+Daniel Lastanao Miró, Project Leader  
+Javier Carrillo-Mondéjar, Project Member  
+Ricardo J. Rodríguez, Project Member  
 
 # License
 Licensed under the GNU [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) license.
