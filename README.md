@@ -1,8 +1,9 @@
 # Characterizing-TTPs-in-the-macOS-Threat-Landscape
 Source data and Scripts used for the paper: Characterizing Tactics, Techniques, and Procedures in the macOS Threat Landscape
 
-
-# Scripts:
+# Installation and Usage
+The scripts rund with Python 3.11+. To use the scripts you only have to change the path where source data is and output data and run it.
+# Scripts
 Die.py — Get entropy of each hash with D.I.E.  
 checkdga.py — Check domains comparing domains to DGARCHIVE  
 commonMethods.py — Some methods that are used by different scripts  
@@ -18,8 +19,7 @@ radareScriptAll.py -- Get all information of each binary with radare
 timelinecpuSamples.py — Timeline CPU and sandbox figures  
 
 
-# Results:
-
+# Results
 all_df_merged.csv -- Basic info from each hash, family, submission date, code signature information and cpu type  
 radare_not_ios.csv -- info from radare: stripped, number of symbols, size, complexity, cputype, filetype  
 countMalware_df.csv -- Sum of malware from different families  
@@ -38,8 +38,7 @@ lib_counts.csv -- Libraries included from all binaries
 unique_hashes_with_info.csv -- Binaries that have behavior in the V.T. sandboxes  
 hash_and_malicious_ratio.csv -- Hash and his ratio of malicious detected by A.V. by V.T., the total is the sum of A.V. that has classified the different files by harmless, suspicious, undetected and malicious.
 
-## Network info
-
+# Network info
 basicNetwork.csv -- Network info of each binary  
 dns_counts.csv -- All domains consulted  
 ips_counts.csv -- All IPs consulted  
@@ -49,3 +48,11 @@ malicious_domains.csv -- Domains classified as malicious by V.T.
 malicious_ips.csv -- IPs classified as malicious by V.T.  
 Domains_Summary.log -- Summary information of all domains consulted to NeutrinoAPI  
 Ips_Summary.log -- Summary information of all IPs consulted to NeutrinoAPI  
+
+# Authors
+Daniel Lastanao Miró, Project Leader
+Javier Carrillo-Mondéjar, Project Member
+Ricardo J. Rodríguez, Project Member
+
+# License
+Licensed under the GNU [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) license.
