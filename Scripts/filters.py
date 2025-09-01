@@ -1,7 +1,16 @@
 import pandas as pd
 
-columnNameHash = "Hash"
 
+__author__ = "Daniel Lastanao Miró, Javier Carrillo-Mondéjar and Ricardo J. Rodríguez"
+__copyright__ = "Copyright 2025"
+__credits__ = ["Daniel Lastanao Miró" , "Javier Carrillo-Mondéjar" ,  "Ricardo J. Rodríguez"]
+__license__ = "GPL"
+__version__ = "1"
+__maintainer__ = "Daniel Lastanao Miró"
+__email__ = "reverseame@unizar.es"
+__status__ = "Finished"
+
+columnNameHash = "Hash"
 radare_csv_path = '../Output/csv/src/radare_not_ios.csv'
 radare_df = pd.read_csv(radare_csv_path)
 file_types = dict(zip(radare_df[columnNameHash], radare_df['file_type']))#x-mach-binary
@@ -14,6 +23,15 @@ sandboxes_types = dict(zip(sandboxes_df[columnNameHash], sandboxes_df['Sandbox']
 ios_hashes_df = pd.read_csv('../Output/csv/src/iOShashes.csv')
 
 def filer_hash_alldata(hash):
+    """
+    Check whether a file hash should be skipped based on type, header, or iOS tag.
+
+    Args:
+        hash -- File hash identifier.
+
+    Returns:
+        bool: True if the file should be skipped, False otherwise.
+    """
     if hash not in file_types or file_types[hash] != "application/x-mach-binary":
         return True  # Skip files that do not match the 'application/x-mach-binary' type
 
@@ -26,6 +44,15 @@ def filer_hash_alldata(hash):
     return False
 
 def filter_hash_behavior(hash):
+    """
+    Check whether a file hash should be skipped based on sandbox analysis results.
+
+    Args:
+        hash -- File hash identifier.
+
+    Returns:
+        bool: True if the file should be skipped, False if it should be analyzed.
+    """
 
     if filer_hash_alldata(hash):
         return True

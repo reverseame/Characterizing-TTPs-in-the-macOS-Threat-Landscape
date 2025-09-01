@@ -1,12 +1,28 @@
 import json
 from pathlib import Path
 
+__author__ = "Daniel Lastanao Miró, Javier Carrillo-Mondéjar and Ricardo J. Rodríguez"
+__copyright__ = "Copyright 2025"
+__credits__ = ["Daniel Lastanao Miró" , "Javier Carrillo-Mondéjar" ,  "Ricardo J. Rodríguez"]
+__license__ = "GPL"
+__version__ = "1"
+__maintainer__ = "Daniel Lastanao Miró"
+__email__ = "reverseame@unizar.es"
+__status__ = "Finished"
+
+
 VT_PATH_DOMAINS    = '../Output/Hashes_info/VT_DOMAINS_JSON'
 VT_IP_DOMAINS    = '../Output/Hashes_info/VT_IP_JSON'
 
-
-
 def getInfoReportsVT(path,path_out,name):
+    """
+    Analyze VirusTotal JSON reports and log malicious counts.
+
+    Args:
+        path -- Input directory with VirusTotal JSON reports.
+        path_out -- Output CSV file to store results.
+        name -- Label for the dataset.
+    """
 
     with open(path_out, "a") as file:
         file.write(name + ',' + 'Malicious'+'\n')

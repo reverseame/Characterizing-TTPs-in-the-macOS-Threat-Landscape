@@ -7,15 +7,23 @@ import json
 import time
 import sys
 import filters
+
+__author__ = "Daniel Lastanao Miró, Javier Carrillo-Mondéjar and Ricardo J. Rodríguez"
+__copyright__ = "Copyright 2025"
+__credits__ = ["Daniel Lastanao Miró" , "Javier Carrillo-Mondéjar" ,  "Ricardo J. Rodríguez"]
+__license__ = "GPL"
+__version__ = "1"
+__maintainer__ = "Daniel Lastanao Miró"
+__email__ = "reverseame@unizar.es"
+__status__ = "Finished"
+
 columnNameHash = "Hash"
 columnNameAvgEntropy = "Avg_Entropy"
 columnNamePacked = "Packed"
-
 log_file_path = "die_output.log"
 
 die_df = pd.DataFrame(columns=[columnNameHash,columnNameAvgEntropy,columnNamePacked])
 
-# print(die.scan_file("/bin/ls", die.ScanFlags.Deepscan)) NO FUNCIONA LA API (LIBRARIA DIE)
 class Logger:
     def __init__(self):
         self.terminal = sys.__stdout__  
@@ -33,6 +41,13 @@ sys.stdout = Logger()
 
 
 def scan_file(file_path):
+    """
+    Scan a file using 'diec' tool and return parsed JSON result.
+    Args:
+        file_path -- Path of the file to scan
+    Returns:
+        result -- str of information from DIE tool
+    """
     try:
         result = subprocess.run(['diec', '-ej',file_path], capture_output=True, text=True, timeout=300)
         return result.stdout
@@ -40,12 +55,27 @@ def scan_file(file_path):
         return "Timeout!"
 
 def addInfoToDf(die_df,hash,avg_entropy,packed):
+    """
+    Append a new scan result row to the DIE DataFrame.
+
+    Args:
+        die_df -- Existing DataFrame containing DIE scan results.
+        hash -- File hash (unique identifier of the scanned binary).
+        avg_entropy -- Average entropy value of the binary file.
+        packed -- Packing status returned by DIE.
+
+    Returns:
+        pd.DataFrame -- Updated DataFrame including the new row.
+    """
     die_df = pd.concat([pd.DataFrame([[hash,avg_entropy, packed]], columns=[columnNameHash,columnNameAvgEntropy, columnNamePacked]), die_df], ignore_index=True)
     return die_df
 
 
 if __name__ == "__main__":
-        
+    """
+    Main entry point for scanning Mach-O binaries with DIE.
+    """
+    
     binary_dir = '/mnt/DATASETS/macho-binaries-and-reports/binaries/'
     path = Path(binary_dir)
     start_time = time.time()

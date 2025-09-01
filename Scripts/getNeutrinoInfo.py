@@ -1,6 +1,15 @@
 import json
 from pathlib import Path
 
+__author__ = "Daniel Lastanao Miró, Javier Carrillo-Mondéjar and Ricardo J. Rodríguez"
+__copyright__ = "Copyright 2025"
+__credits__ = ["Daniel Lastanao Miró" , "Javier Carrillo-Mondéjar" ,  "Ricardo J. Rodríguez"]
+__license__ = "GPL"
+__version__ = "1"
+__maintainer__ = "Daniel Lastanao Miró"
+__email__ = "reverseame@unizar.es"
+__status__ = "Finished"
+
 N_PATH_DOMAINS    = '../Output/Hashes_info/Neutrino_API/N_DOMAIN_JSON'
 N_IP_DOMAINS    = '../Output/Hashes_info/Neutrino_API/N_IP_JSON'
 
@@ -29,6 +38,9 @@ info_domains = {
 }
 
 def getInfoIps():
+    """
+    Aggregate flags from Neutrino API IP reports and log summary.
+    """
     global N_IP_DOMAINS
     global info
 
@@ -46,6 +58,9 @@ def getInfoIps():
         log.write(f"{info}")
 
 def getInfoDomains():
+    """
+    Aggregate flags from Neutrino API domain reports and log summary.  
+    """
     global N_PATH_DOMAINS
     global info_domains
 

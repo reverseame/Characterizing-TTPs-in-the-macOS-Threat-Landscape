@@ -32,4 +32,10 @@ for technique in techniques:
             technique_to_tactic[technique_id].append(tactic)
 
 def get_technique_to_tactic():
+    """
+    Get the mapping from MITRE ATT&CK technique IDs to tactics.
+
+    Returns:
+        dict -- Mapping of technique IDs to lists of associated tactics.
+    """
     return technique_to_tactic
