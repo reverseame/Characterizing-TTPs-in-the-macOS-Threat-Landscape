@@ -4,18 +4,16 @@ Source data and Scripts used for the paper: Characterizing Tactics, Techniques, 
 # Installation and Usage
 The scripts runs with Python 3.11+. To use the scripts you only have to change the path where source data is and output data and run it.
 # Scripts
-Die.py — Get entropy of each hash with D.I.E.  
+die.py — Get entropy of each hash with D.I.E.  
 checkdga.py — Check domains comparing domains to DGARCHIVE  
 commonMethods.py — Some methods that are used by different scripts  
 createGraphics.py — Parser of the majority of information from reports and generator of the majority of tables and figures  
 filters.py — Functions to filter samples and analyze only executable binaries  
-getFiletype.py — Get filetype of file  
-getLangOfBinary.py — Get language of each binary with radare  
+getFileTypeLanguageAndSymbols.py — Get file types, language and symbols information from radare
 GetNeutrinoInfo.py — Get neutrino information of domains and IPs  
-getR2Symbols.py — Get symbols of each binary with radare  
 getVTNetwrokInfo.py — Get V.T. network information of domains and IPs classificating them as malicious or not  
 mapperTechniquesToTactics.py -- Map techniques of MITRE to tactics of MITRE and convert the technique numbers to names  
-radareScriptAll.py -- Get all information of each binary with radare  
+radareComplementaryInfo.py -- Get information not getted before from radare; size, stripped, number of symbols, complexity, CPU type, and file type.
 timelinecpuSamples.py — Timeline CPU and sandbox figures  
 
 
