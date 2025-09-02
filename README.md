@@ -13,7 +13,7 @@ getFileTypeLanguageAndSymbols.py — Get file types, language and symbols inform
 GetNeutrinoInfo.py — Get neutrino information of domains and IPs  
 getVTNetwrokInfo.py — Get V.T. network information of domains and IPs classificating them as malicious or not  
 mapperTechniquesToTactics.py -- Map techniques of MITRE to tactics of MITRE and convert the technique numbers to names  
-radareComplementaryInfo.py -- Get information not getted before from radare; size, stripped, number of symbols, complexity, CPU type, and file type.
+radareComplementaryInfo.py -- Get information not getted before from radare; size, stripped, number of symbols, complexity, CPU type, and file type  
 timelinecpuSamples.py — Timeline CPU and sandbox figures  
 
 
