@@ -48,9 +48,12 @@ Domains_Summary.log -- Summary information of all domains consulted to NeutrinoA
 Ips_Summary.log -- Summary information of all IPs consulted to NeutrinoAPI  
 
 # Authors
-Daniel Lastanao Miró, Project Leader  
-Javier Carrillo-Mondéjar, Project Member  
-Ricardo J. Rodríguez, Project Member  
+Daniel Lastanao Miró  
+Javier Carrillo-Mondéjar  
+Ricardo J. Rodríguez
+
+# Fundings
+This research was supported in part by grant PID2023-151467OA-I00 (CRAPER), funded by MICIU/AEI/10.13039/501100011033 and by ERDF/EU, by grant TED2021-131115A-I00 (MIMFA), funded by MICIU/AEI/10.13039/501100011033 and by the European Union NextGenerationEU/PRTR, by grant Proyecto Estratégico Ciberseguridad EINA UNIZAR, funded by the Spanish National Cybersecurity Institute (INCIBE) and the European Union NextGenerationEU/PRTR, by grant Programa de Proyectos Estratégicos de Grupos de Investigación (DisCo, ref. T21-23R), funded by the University, Industry and Innovation Department of the Aragonese Government. We thank the VT team for granting academic research access to their services.
 
 # License
 Licensed under the GNU [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) license.
