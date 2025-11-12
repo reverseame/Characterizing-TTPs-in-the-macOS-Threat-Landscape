@@ -18,34 +18,12 @@ timelinecpuSamples.py — Timeline CPU and sandbox figures
 
 
 # Results
-all_df_merged.csv -- Basic info from each hash, family, submission date, code signature information and cpu type  
+The files that are missing it's due to VirusTotal’s data sharing policy, we are not allowed to redistribute the reports of the hashes and the proper information used for the analysis. 
 radare_not_ios.csv -- info from radare: stripped, number of symbols, size, complexity, cputype, filetype  
-countMalware_df.csv -- Sum of malware from different families  
 Die.csv -- Entropy from die of each bianry  
-Filetype.csv -- Filetype of each binary  
 iOShashes.csv -- All the Mach-O hashes that are made for iOS  
-mitre_df.csv -- Behavior of each binary  
-sandbox_Df_filtered.csv -- Sandbox where the binary has been executed  
-symbols_modified.csv -- All the symbols extracted with radare  
-command_count.csv -- Commands used for all the binaries  
-dynamicInfo.csv -- Linked status per binary  
-file_opened_counts.csv -- All the files opened by the binaries during execution  
-file_written_counts -- All the files written by the binaries during execution  
 Langs.csv -- Programming language based on the analysis of radare  
-lib_counts.csv -- Libraries included from all binaries  
-unique_hashes_with_info.csv -- Binaries that have behavior in the V.T. sandboxes  
 hash_and_malicious_ratio.csv -- Hash and his ratio of malicious detected by A.V. by V.T., the total is the sum of A.V. that has classified the different files by harmless, suspicious, undetected and malicious.
-
-# Network info
-basicNetwork.csv -- Network info of each binary  
-dns_counts.csv -- All domains consulted  
-ips_counts.csv -- All IPs consulted  
-methods_count.csv -- All HTTP methods used  
-content_type_count.csv -- All HTTP content type used  
-malicious_domains.csv -- Domains classified as malicious by V.T.  
-malicious_ips.csv -- IPs classified as malicious by V.T.  
-Domains_Summary.log -- Summary information of all domains consulted to NeutrinoAPI  
-Ips_Summary.log -- Summary information of all IPs consulted to NeutrinoAPI  
 
 # Authors
 Daniel Lastanao Miró  
