@@ -18,7 +18,7 @@ timelinecpuSamples.py — Timeline CPU and sandbox figures
 
 
 # Results
-The files that are missing it's due to VirusTotal’s data sharing policy, we are not allowed to redistribute the reports of the hashes and the proper information used for the analysis. 
+The files that are missing it's due to VirusTotal’s data sharing policy, we are not allowed to redistribute the reports of the hashes and the proper information used for the analysis.  
 radare_not_ios.csv -- info from radare: stripped, number of symbols, size, complexity, cputype, filetype  
 Die.csv -- Entropy from die of each bianry  
 iOShashes.csv -- All the Mach-O hashes that are made for iOS  
